@@ -1,5 +1,6 @@
 // update:
-// get familiar with each data structure and implement it
+// add application with GUI
+
 // arrays (int[]): a list of variables that can be sorted or done whatever with
 // linked list: arrays but connected head to toe, like a map (ex: searching a list until you find the number)
 // stacks: like a stack of plates, you use the first plate on top (FIFO)
