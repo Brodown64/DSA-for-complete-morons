@@ -5,38 +5,42 @@ import java.awt.event.*;
 public class GUI implements ActionListener {
 
 	private int count = 0;
-	private JLabel label;
+
+	private JButton myButton;
 
 	public GUI() {
 
-		JFrame frame = new JFrame();
-		label = new JLabel("Number of clicks: 000");
+    JFrame frame = new JFrame();
 
-        JButton button = new JButton("Deez nuts");
-        button.addActionListener(this);
+    myButton = new JButton("Arrays");
+    myButton.addActionListener(this);
+    myButton.setBounds(100,160,200,40);
+    myButton.setFocusable(false);
 
-		JPanel panel = new JPanel();
-		panel.setBorder(BorderFactory.createEmptyBorder(120, 120, 120, 120)); // top, bottom, left, right
-		panel.setLayout(new GridLayout(0, 1));
+    JPanel panel = new JPanel();
+    panel.setBorder(BorderFactory.createEmptyBorder(420, 420, 420, 420));
+    panel.setLayout(new GridLayout(0, 1));
 
-		panel.add(button);
-		panel.add(label);
+    panel.add(myButton);
+    frame.add(panel, BorderLayout.CENTER);
 
-		frame.add(panel, BorderLayout.CENTER);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setTitle("DSA");
-		frame.pack();
-		frame.setLocationRelativeTo(null);
-		frame.setVisible(true);
-	}
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(420,420);
+    frame.setTitle("DSA");
+    frame.pack();
+    frame.setLocationRelativeTo(null);
+    frame.setVisible(true);
+}
 
 	public static void main(String[] args) {
 		new GUI();
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		count++; // increases count var by 1
-		label.setText("Number of clicks: " + count);
+
+		if(e.getSource()==myButton) {
+			NewWindow myWindow = new NewWindow();
+		}
 
 	}
 }
