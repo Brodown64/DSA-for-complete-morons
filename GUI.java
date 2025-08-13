@@ -7,21 +7,28 @@ public class GUI implements ActionListener {
 	private int count = 0;
 
 	private JButton myButton;
+    private JButton myLinked;
 
 	public GUI() {
 
     JFrame frame = new JFrame();
 
     myButton = new JButton("Arrays");
+    myLinked = new JButton("Linked Lists");
     myButton.addActionListener(this);
     myButton.setBounds(100,160,200,40);
     myButton.setFocusable(false);
+    myLinked.addActionListener(this);
+    myLinked.setBounds(100,160,200,40);
+    myLinked.setFocusable(false);
+
 
     JPanel panel = new JPanel();
     panel.setBorder(BorderFactory.createEmptyBorder(420, 420, 420, 420));
     panel.setLayout(new GridLayout(0, 1));
 
     panel.add(myButton);
+    panel.add(myLinked);
     frame.add(panel, BorderLayout.CENTER);
 
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -41,6 +48,9 @@ public class GUI implements ActionListener {
 		if(e.getSource()==myButton) {
 			NewWindow myWindow = new NewWindow();
 		}
+        if(e.getSource()==myLinked) {
+            NewLinkWindow myLinkWindow = new NewLinkWindow();
+        }
 
 	}
 }

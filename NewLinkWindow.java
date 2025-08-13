@@ -4,15 +4,14 @@ import java.awt.*;
 // update:
 // show code
 
-public class NewWindow {
+public class NewLinkWindow {
 
-    static void Arrays() {
-
+    public NewLinkWindow() {
         JFrame frame = new JFrame();
         JPanel panel = new JPanel();
-        JLabel arrayLabel = new JLabel("Array");
-        JLabel arrayLabelDef = new JLabel("arrays (int[]): a list of variables that can be sorted or done whatever with");
-        JLabel multilineLabel = new JLabel("<html>int[] vars = {4, 2, 8, 6};<br>int[] vars2 = {4, 2, 8, 6};<br>System.out.println(Arrays.toString(vars));</html>");
+        JLabel arrayLabel = new JLabel("Linked List");
+        JLabel arrayLabelDef = new JLabel("linked list: arrays but connected head to toe, like a map (ex: searching a list until you find the number)");
+        JLabel multilineLabel = new JLabel("<html>System.out.println('Link');<br>LinkedList<String> games = new LinkedList<String>();<br>games.add('Mario');<br>games.add('Sonic');<br><br>games.add('Link');<br><br>games.addFirst('Sora');<br><br>games.removeLast();<br><br>System.out.println(games);<br></html>");
 
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS)); 
@@ -31,13 +30,5 @@ public class NewWindow {
         frame.pack();  
         frame.setLocationRelativeTo(null);  
         frame.setVisible(true);
-    }
-
-    static void linkedLists() {
-        
-    }
-
-    public NewWindow() {
-        Arrays();
     }
 }
